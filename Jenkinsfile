@@ -23,11 +23,12 @@ pipeline {
             }
         }
         stage ('Stg3') {
-            steps {
-                when {
-                    not {
-                        branch "master"
-                    }
+            when {
+                not {
+                    branch "master"
+                }
+                steps {
+                    echo "Run if not master"
                 }
             }
         }
