@@ -22,5 +22,12 @@ pipeline {
                 }
             }
         }
+        stage ('Stg3') {
+            when {
+                not {
+                    branch "master"
+                }
+            }
+        }
     }
 }
