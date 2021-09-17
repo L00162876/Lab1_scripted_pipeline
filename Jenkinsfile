@@ -16,7 +16,9 @@ pipeline {
                     }
                 }
                 stage ("2.2") {
-                    echo "This is step 2.2"
+                    steps {
+                        echo "This is step 2.2"
+                    }
                 }
             }
         }
