@@ -27,9 +27,9 @@ pipeline {
                 not {
                     branch "master"
                 }
-                steps {
-                    echo "Run if not master"
-                }
+            }
+            steps {
+                echo "Run if not master"
             }
         }
     }
