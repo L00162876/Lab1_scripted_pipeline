@@ -23,9 +23,11 @@ pipeline {
             }
         }
         stage ('Stg3') {
-            when {
-                not {
-                    branch "master"
+            steps {
+                when {
+                    not {
+                        branch "master"
+                    }
                 }
             }
         }
