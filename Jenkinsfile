@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh sudo "mvn --version"
-                sh sudo "mvn clean install"
+                sudo "mvn --version"
+                sudo "mvn clean install"
             }
         }
     }
