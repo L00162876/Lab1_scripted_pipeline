@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh ./mvn --version
-                sh ./mvn clean install
+                sh "chmod +x /home/user/.jenkins/workspace/Lab1_scripted_pipeline"
+                sh "mvn --version"
+                sh "mvn clean install"
             }
         }
     }
