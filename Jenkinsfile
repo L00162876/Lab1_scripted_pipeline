@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                su -s /bin/bash jenkins
-                sh "mvn --version"
-                sh "mvn clean install"
+                sudo su -s sh "mvn --version"
+                sudo su -s sh "mvn clean install"
             }
         }
     }
