@@ -1,38 +1,47 @@
 package calculator_lyit;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+class AppTest {
+
+    @Test
+    void add() {
+        int x = 400;
+        int y = 100;
+        App testCalculator = new App(x, y);
+        assertEquals(x + y,testCalculator.add()," Not Correct");
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    @Test
+    void subtract() {
+        int x = 10500;
+        int y = 20000;
+        App testCalculator = new App(x, y);
+        assertEquals(x - y, testCalculator.subtract(), " Not Correct");
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    void multiply() {
+        int x = -600;
+        int y = 500;
+        App testCalculator = new App(x, y);
+        assertEquals(x * y, testCalculator.multiply(), " Not Correct");
+    }
+
+    @Test
+    void divide() {
+        int x = 1500;
+        int y = 300;
+        App testCalculator = new App(x, y);
+        assertEquals(x / y, testCalculator.divide()," Not Correct");
+    }
+
+    @Test
+    void modulo() {
+        int x = 255;
+        int y = 200;
+        App testCalculator = new App(x, y);
+        assertEquals(x % y, testCalculator.modulo(), " Not Correct");
     }
 }
