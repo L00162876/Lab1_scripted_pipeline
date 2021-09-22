@@ -1,23 +1,16 @@
 pipeline {
     agent {
         docker {
-            image "maven:3.6.0-jdk-13"
-            label "docker"
+            image 'maven:3.8.1-adoptjdk-11'
+            args '-v /root/.m2:root/.m2'
         }
     }
 
     stages {
         stage ('Build') {
             steps {
-                sh "mvn --version"
-                sh "mvn clean install"
+                sh "mvn -B -DskipTests clean package"
             }
-        }
-    }
-
-    post {
-        always {
-            cleanWs()
         }
     }
 }
