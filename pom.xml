@@ -85,19 +85,10 @@
   </build>
   
   <distributionManagement>
-    <repositories>
-      <repository>
-        <id>apache.snapshots</id>
-        <name>Apache Snapshots</name>
-        <url>https://repository.apache.org/content/groups/snapshots-group/</url>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </repository>
-    </repositories>
+    <site>
+      <id>apache.website</id>
+      <url>scm:svn:https://svn.apache.org/repos/asf/maven/website/components/${maven.site.path}</url>
+    </site>
   </distributionManagement>
 
 </project>
