@@ -1,6 +1,6 @@
 node {
 
-   property([disableConcurrentBuilds()])   
+   properties([disableConcurrentBuilds()])   
 
    stage ('Compile Stage') {
 
