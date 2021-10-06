@@ -1,5 +1,7 @@
 node {
 
+   property([disableConcurrentBuilds()])   
+
    stage ('Compile Stage') {
 
        sh 'mvn clean compile'  
